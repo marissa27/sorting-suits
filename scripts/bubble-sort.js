@@ -1,19 +1,27 @@
-
 const bubbleSort = (array) => {
-  let length = array.length;
-    for(var i = 1; i < length; i++) {
-      let current = array[i];
 
-      for(var next = i - 1; array[next] > current; next--){
-        array[next + 1] = array[next]
-      }
+  debugger
 
-      array[next + 1] = current
+    do {
 
-    }
+      var sort = true;
 
-    return array
+      bubbleArray.forEach(function(currentValue,index,array) {
 
+        if (currentValue > array[index + 1]) {
+
+          sort = false;
+
+          bubbleArray[index] = array[index + 1];
+
+          bubbleArray[index + 1] = currentValue;
+
+        }
+      })
+
+    } while (!sort);
+
+    return array;
   }
 
 bubbleSort([2, 1, 3, 5, 4]);
@@ -31,7 +39,8 @@ export default bubbleSort
   // if current > next then switch index place with next
 
 
-    // next becomes current and run the compare again
+    // continue up as long as number is greater
+    // if smaller make current the larger number and continue through array check
 
 
   // loop through again with same as above
