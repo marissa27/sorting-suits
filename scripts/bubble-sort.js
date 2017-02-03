@@ -6,15 +6,15 @@ const bubbleSort = (array) => {
 
       var sort = true;
 
-      bubbleArray.forEach(function(currentValue,index,array) {
+      array.forEach(function(currentValue,index,array) {
 
         if (currentValue > array[index + 1]) {
 
           sort = false;
 
-          bubbleArray[index] = array[index + 1];
+          array[index] = array[index + 1];
 
-          bubbleArray[index + 1] = currentValue;
+          array[index + 1] = currentValue;
 
         }
       })
